@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Story Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI Story Generator</h1>
+        <h4>create unique stories with the power of AI</h4>
+        <div id="first-box">
+            <input type="text" id="prompt" placeholder="Enter story idea">
+
+            <select id="genre">
+                <option>Fantasy</option>
+                <option>Inspirational</option>
+                <option>Life Lessons</option>
+                <option>Horror</option>
+                <option>Adventure</option>
+                <option>Sci-Fi</option>
+                <option>Comedy</option>
+            </select>
+            <div id="btn-container">
+            <button id ="generateBtn" onclick="generateStory()">Generate Story</button>
+            <button id="pdfBtn" onclick="downloadPDF()">Download PDF</button>
+            <button id="voiceBtn" onclick="toggleVoice()">Read Story</button>
+            </div>
+        </div>
+        <div id="second-box">
+            <div id="storyBox"></div>
+
+            <textarea
+                id="feedback"
+                placeholder="Example: Make the ending happier">
+            </textarea>
+
+            <button onclick="modifyStory()">Modify Story</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
